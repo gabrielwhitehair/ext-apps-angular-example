@@ -23,5 +23,5 @@ function buildJs(entrypoint: string, opts: Record<string, any> = {}) {
 await Promise.all([
   buildJs("src/app.ts", { outdir: "dist/src" }),
   buildJs("src/app-bridge.ts", { outdir: "dist/src", external: ["@modelcontextprotocol/sdk"] }),
-  buildJs("src/react/index.tsx", { outdir: "dist/src/react" }),
+  buildJs("src/react/index.tsx", { outdir: "dist/src/react", external: ["react", "react-dom"]}),
 ])
