@@ -16,6 +16,10 @@ This repo provides:
   - [ui-vanilla.tsx](./examples/simple-server/src/ui-vanilla.ts): vanilla App returned by the `create-ui-vanilla`
   - [ui-raw.tsx](./examples/simple-server/src/ui-raw.ts): same as vanilla App but doesn't use the SDK runtime (just its types)
 
+- [examples/simple-host](./examples/simple-host): bare-bone examples on how to host MCP Apps (both use the [AppBridge](./src/app-bridge.ts) class to talk to a hosted App)
+  - [example-host-react.tsx](./examples/simple-host/src/example-host-react.tsx) uses React (esp. [AppRenderer.tsx](./examples/simple-host/src/AppRenderer.tsx))
+  - [example-host-vanilla.tsx](./examples/simple-host/src/example-host-vanilla.tsx) doesn't use React
+
 - [message-transport](./src/message-transport.ts): `PostMessageTransport` class that uses `postMessage` to exchange JSON-RPC messages between windows / iframes
 
 - [app.ts](./src/app.ts): `App` class used by an App to talk to its host
@@ -26,9 +30,8 @@ This repo provides:
 
 What this repo does NOT provide:
 
-- There's no host implementation here (beyond the `AppBridge` just used for communications).
+- There's no *supported* host implementation in this repo (beyond the [examples/simple-host](./examples/simple-host) example)
   - We have [contributed a tentative implementation](https://github.com/MCP-UI-Org/mcp-ui/pull/147) of hosting / iframing / sandboxing logic to the [MCP-UI](https://github.com/idosal/mcp-ui) repository, and expect OSS clients may use it, while other clients might roll their own hosting logic.
-  - A prior iteration of an e2e prototype w/ client, server and hosting parts is available [in this gist](https://gist.github.com/ochafik/a9603ba2d6757d6038ce066eded4c354)
 
 ## Installation
 
