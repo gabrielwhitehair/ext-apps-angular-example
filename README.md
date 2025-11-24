@@ -33,15 +33,28 @@ What this repo does NOT provide:
 - There's no *supported* host implementation in this repo (beyond the [examples/simple-host](./examples/simple-host) example)
   - We have [contributed a tentative implementation](https://github.com/MCP-UI-Org/mcp-ui/pull/147) of hosting / iframing / sandboxing logic to the [MCP-UI](https://github.com/idosal/mcp-ui) repository, and expect OSS clients may use it, while other clients might roll their own hosting logic.
 
-## Installation
+## Using the SDK
 
-This repo is in flux and isn't published to npm (when it is, it will use the `@modelcontextprotocol/ext-apps` package). Please install it from git for now:
+### Run examples
+
+Run the examples in this repo end-to-end:
+
+```
+npm i
+npm start
+open http://localhost:8080/
+```
+
+> [!NOTE]  
+> Please bear with us while we add more examples!
+
+### Use the SDK in your project
+
+This repo is in flux and isn't published to npm (when it is, it will use the `@modelcontextprotocol/ext-apps` package). In the meantime you can depend on the SDK library in a Node.js project by installing it w/ its git URL:
 
 ```bash
 npm install git+https://github.com/modelcontextprotocol/ext-apps.git
 ```
-
-## Development Notes
 
 ### Build tools in dependencies
 
