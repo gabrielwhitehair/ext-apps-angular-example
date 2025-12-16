@@ -561,8 +561,8 @@ Host behavior:
 ```
 
 Host behavior:
-* Host SHOULD check if the requested mode is in `availableDisplayModes` from host context.
-* If the requested mode is available, Host SHOULD switch to that mode and return it in the response.
+* App MUST check if the requested mode is in `availableDisplayModes` from host context.
+* It is up to the host whether it switches to the requested mode, but the host MUST return the resulting mode (whether updated or not) in the response.
 * If the requested mode is not available, Host SHOULD return the current display mode in the response.
 * Host MAY coerce modes on certain platforms (e.g., "pip" to "fullscreen" on mobile).
 
