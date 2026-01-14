@@ -1,3 +1,13 @@
+#!/usr/bin/env uv run
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "mcp>=1.9.0",
+#     "qrcode[pil]>=8.0",
+#     "uvicorn>=0.34.0",
+#     "starlette>=0.46.0",
+# ]
+# ///
 """
 QR Code MCP Server - Generates QR codes from text
 """
