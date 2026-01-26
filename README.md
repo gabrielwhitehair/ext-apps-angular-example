@@ -326,6 +326,173 @@ To use these examples with MCP clients that support the stdio transport (such as
 > [!NOTE]
 > The `qr` server requires cloning the repository first. See [qr-server README](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/qr-server) for details.
 
+#### Local Development
+
+To test local modifications with MCP clients, first clone and install the repository:
+
+```bash
+git clone https://github.com/modelcontextprotocol/ext-apps.git
+cd ext-apps
+npm install
+```
+
+Then configure your MCP client to build and run the local server. Replace `~/code/ext-apps` with your actual clone path:
+
+<details>
+<summary>MCP client configuration for local development (all examples)</summary>
+
+```json
+{
+  "mcpServers": {
+    "basic-react": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-react && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-vanillajs": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-vanillajs && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-vue": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-vue && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-svelte": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-svelte && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-preact": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-preact && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-solid": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-solid && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "budget-allocator": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/budget-allocator-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "cohort-heatmap": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/cohort-heatmap-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "customer-segmentation": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/customer-segmentation-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "map": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/map-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "pdf": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/pdf-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "scenario-modeler": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/scenario-modeler-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "shadertoy": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/shadertoy-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "sheet-music": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/sheet-music-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "system-monitor": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/system-monitor-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "threejs": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/threejs-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "transcript": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/transcript-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "video-resource": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/video-resource-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "wiki-explorer": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/wiki-explorer-server && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "qr": {
+      "command": "bash",
+      "args": ["-c", "uv run ~/code/ext-apps/examples/qr-server/server.py --stdio"]
+    },
+    "say": {
+      "command": "bash",
+      "args": ["-c", "uv run --index https://pypi.org/simple ~/code/ext-apps/examples/say-server/server.py --stdio"]
+    }
+  }
+}
+```
+
+</details>
+
+This configuration rebuilds each server on launch, ensuring your local changes are picked up.
+
 ## Resources
 
 - [Quickstart Guide](https://modelcontextprotocol.github.io/ext-apps/api/documents/Quickstart.html)
