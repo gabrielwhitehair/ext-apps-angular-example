@@ -1,3 +1,13 @@
+# This is an investigation into if the Angular server will work or not. Here is what my MCP config looks like locally on VSCode on my windows machine:
+
+    "basic-angular-local": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "cd /d C:\\Users\\gabew\\Documents\\Golden_Image\\codexarea\\ext-apps\\examples\\basic-server-angular && npm run build && node dist\\index.js --stdio",
+      ],
+    },
+
 # @modelcontextprotocol/ext-apps
 
 [![npm version](https://img.shields.io/npm/v/@modelcontextprotocol/ext-apps.svg)](https://www.npmjs.com/package/@modelcontextprotocol/ext-apps) [![API Documentation](https://img.shields.io/badge/docs-API%20Reference-blue)](https://modelcontextprotocol.github.io/ext-apps/api/)
