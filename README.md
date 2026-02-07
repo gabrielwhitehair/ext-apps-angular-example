@@ -88,7 +88,7 @@ The [`examples/`](https://github.com/modelcontextprotocol/ext-apps/tree/main/exa
 
 | | |
 |:---:|:---|
-| [![Basic](examples/basic-server-react/grid-cell.png "Starter template")](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-react) | The same app built with different frameworks — pick your favorite!<br><br>[React](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-react) · [Vue](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-vue) · [Svelte](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-svelte) · [Preact](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-preact) · [Solid](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-solid) · [Vanilla JS](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-vanillajs) |
+| [![Basic](examples/basic-server-react/grid-cell.png "Starter template")](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-react) | The same app built with different frameworks — pick your favorite!<br><br>[React](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-react) · [Angular](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-angular) · [Vue](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-vue) · [Svelte](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-svelte) · [Preact](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-preact) · [Solid](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-solid) · [Vanilla JS](https://github.com/modelcontextprotocol/ext-apps/tree/main/examples/basic-server-vanillajs) |
 <!-- prettier-ignore-end -->
 
 ### Running the Examples
@@ -123,6 +123,16 @@ To use these examples with MCP clients that support the stdio transport (such as
         "--silent",
         "--registry=https://registry.npmjs.org/",
         "@modelcontextprotocol/server-basic-react",
+        "--stdio"
+      ]
+    },
+    "basic-angular": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "--silent",
+        "--registry=https://registry.npmjs.org/",
+        "@modelcontextprotocol/server-basic-angular",
         "--stdio"
       ]
     },
@@ -356,6 +366,13 @@ Then configure your MCP client to build and run the local server. Replace `~/cod
       "args": [
         "-c",
         "cd ~/code/ext-apps/examples/basic-server-react && npm run build >&2 && node dist/index.js --stdio"
+      ]
+    },
+    "basic-angular": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd ~/code/ext-apps/examples/basic-server-angular && npm run build >&2 && node dist/index.js --stdio"
       ]
     },
     "basic-vanillajs": {
